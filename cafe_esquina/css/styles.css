@@ -1,0 +1,464 @@
+/* 1. Variables: colores y medidas principales */
+:root {
+    --color-principal: #4b2e24;
+    --color-secundario: #a65f3d;
+    --color-acento: #f2c078;
+    --color-fondo: #fffaf4;
+    --color-suave: #f5eadc;
+    --color-texto: #2d2521;
+    --ancho-maximo: 1100px;
+    --espacio: 1rem;
+}
+
+/* 2. Estilos generales */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    color: var(--color-principal);
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.02em;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--color-secundario);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--color-principal);
+}
+
+a:focus-visible, input:focus-visible, select:focus-visible,
+textarea:focus-visible, button:focus-visible {
+    outline: 3px solid var(--color-secundario);
+    outline-offset: 3px;
+}
+
+/* 3. Encabezado y navegación */
+.encabezado {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 5%;
+    color: white;
+    background-color: var(--color-principal);
+}
+
+.encabezado__logo {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.navegacion a {
+    color: white;
+    padding: 0.35rem 0.5rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+}
+
+.navegacion a:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* 4. Portada con fondo múltiple */
+.portada {
+    padding: 5rem 1.5rem;
+    color: white;
+    background-image:
+        linear-gradient(90deg, rgba(43, 27, 20, 0.92), rgba(43, 27, 20, 0.45)),
+        radial-gradient(circle at top right, #c58a55, #4b2e24);
+    background-position: center;
+    background-size: cover;
+}
+
+.portada__contenido {
+    max-width: 700px;
+    margin: auto;
+    animation: aparecer 0.8s ease-out;
+}
+
+.portada h1 {
+    color: white;
+}
+
+.portada__etiqueta {
+    color: var(--color-acento);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.75rem 1.1rem;
+    border: 2px solid var(--color-secundario);
+    border-radius: 0.5rem;
+    color: white;
+    background-color: var(--color-secundario);
+    font: inherit;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    color: white;
+    background-color: var(--color-principal);
+}
+
+/* 5. Secciones y tarjetas */
+.seccion {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 3rem 1.25rem;
+}
+
+.seccion--suave {
+    max-width: none;
+    background-color: var(--color-suave);
+    border-top: 1px solid #e7d5c1;
+    border-bottom: 1px solid #e7d5c1;
+}
+
+.seccion--suave > h2,
+.seccion--suave > p,
+.seccion--suave > .informacion,
+.seccion--suave > .mapa,
+.seccion--suave > .formulario,
+.seccion--suave > .nota {
+    max-width: var(--ancho-maximo);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.seccion__intro {
+    margin-top: -0.5rem;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tarjeta {
+    flex: 1 1 220px;
+    min-width: 0;
+    padding: 1.25rem;
+    background-color: white;
+    border: 1px solid #e5d4c5;
+    border-left: 5px solid var(--color-secundario);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(75, 46, 36, 0.08);
+    overflow: hidden;
+}
+
+.tarjeta:nth-child(2) {
+    background-color: #fff2df;
+}
+
+.tarjeta h3 {
+    margin-top: 0.5rem;
+}
+
+.tarjeta__icono {
+    font-size: 2.5rem;
+}
+
+.tarjeta p:last-child {
+    margin-bottom: 0;
+}
+
+.tarjeta--promo .precio {
+    color: var(--color-secundario);
+    font-size: 1.2rem;
+}
+
+.precio {
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+.precio s {
+    color: #777;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+/* 6. Información, listas y opiniones */
+.informacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.informacion > article {
+    flex: 1 1 260px;
+}
+
+.lista-horarios {
+    list-style: square;
+    padding-left: 1.4rem;
+}
+
+li::marker {
+    color: var(--color-secundario);
+}
+
+.informacion ol li:first-child {
+    font-weight: bold;
+}
+
+.nota {
+    color: #65554b;
+    font-size: 0.9rem;
+}
+
+.opiniones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.opinion {
+    flex: 1 1 260px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    border: 1px solid #e5d4c5;
+}
+
+.opinion blockquote {
+    margin: 0 0 0.75rem;
+    font-size: 1.05rem;
+}
+
+.opinion blockquote::before {
+    content: "“";
+    color: var(--color-secundario);
+    font-size: 1.8rem;
+}
+
+.opinion cite {
+    font-size: 0.9rem;
+}
+
+/* 7. Mapa y enlaces a secciones */
+.mapa {
+    max-width: var(--ancho-maximo);
+    margin: 1rem auto;
+    overflow: hidden;
+    border: 2px solid var(--color-secundario);
+    border-radius: 0.75rem;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+section:target {
+    outline: 3px solid rgba(166, 95, 61, 0.25);
+    outline-offset: -3px;
+}
+
+/* 8. Segunda página, tabla y formulario */
+.pagina-titulo {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+    background-image: linear-gradient(135deg, #f5eadc, #fffaf4);
+}
+
+.pagina-titulo h1 {
+    margin: 0 0 0.75rem;
+}
+
+.tabla-contenedor {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    padding: 0.8rem;
+    border: 1px solid #d9c7b7;
+    text-align: left;
+}
+
+th {
+    color: white;
+    background-color: var(--color-principal);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff2df;
+}
+
+.formulario {
+    max-width: 650px;
+    margin: 1.5rem auto 0;
+    padding: 1.5rem;
+    border: 1px solid #e5d4c5;
+    border-radius: 0.75rem;
+    background-color: white;
+}
+
+.formulario__campo {
+    margin-bottom: 1rem;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #bda897;
+    border-radius: 0.35rem;
+    font: inherit;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+/* Selector de atributo: esta regla empata con .formulario input y gana por aparecer después */
+input[type="email"] {
+    border-color: var(--color-secundario);
+}
+
+/* 9. Pie de página */
+.pie {
+    padding: 1.5rem;
+    color: white;
+    text-align: center;
+    background-color: var(--color-principal);
+}
+
+.pie p {
+    margin-bottom: 0.4rem;
+}
+
+.pie a {
+    color: var(--color-acento);
+}
+
+/* 10. Animación sencilla */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 11. Ajustes para celulares */
+@media (max-width: 600px) {
+    .encabezado {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .navegacion {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .navegacion a {
+        display: block;
+        padding: 0.5rem;
+    }
+
+    .portada {
+        padding: 3rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .seccion {
+        padding: 2rem 1rem;
+    }
+
+    .productos,
+    .informacion,
+    .opiniones {
+        flex-direction: column;
+    }
+
+    .tarjeta,
+    .opinion {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 0.55rem;
+        font-size: 0.9rem;
+    }
+
+    .formulario {
+        padding: 1rem;
+    }
+}

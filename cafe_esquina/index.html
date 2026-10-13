@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce Café Esquina, un café local con bebidas y postres en Bucaramanga.">
+    <title>Café Esquina | Inicio</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Encabezado compartido -->
+    <header class="encabezado">
+        <a class="encabezado__logo" href="index.html">Café Esquina</a>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="precios.html">Precios y pedidos</a>
+            <a href="#productos">Productos</a>
+            <a href="#ubicacion">Ubicación</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Presentación del negocio -->
+        <section class="portada" id="inicio">
+      <p class="portada__etiqueta">Un descanso sabe mejor aquí</p>
+                <h1>Tu café favorito, a la vuelta de la esquina</h1>
+                <p>En Café Esquina preparamos café, bebidas frías y postres para acompañar tus días en Bucaramanga.</p>
+                <p><strong>Hecho con cariño</strong> y servido para disfrutar. <em>¡Pasa por algo rico!</em></p>
+                <a class="boton" href="precios.html">Ver precios y pedir</a>            <div class="portada__contenido">
+          
+            </div>
+        </section>
+
+        <!-- Productos: cada producto usa article -->
+        <section class="seccion" id="productos">
+            <h2>Nuestros favoritos</h2>
+            <p class="seccion__intro">Estas son algunas opciones para empezar.</p>
+            <div class="productos">
+                <article class="tarjeta">
+                    <div class="tarjeta__icono" aria-hidden="true">☕</div>
+                    <h3>café colombiano</h3>
+                    <p>Café caliente, aromático y preparado al momento.</p>
+                    <p class="precio">$4.000</p>
+                </article>
+                <article class="tarjeta tarjeta--promo">
+                    <div class="tarjeta__icono" aria-hidden="true">☕🧊</div>
+                    <h3>Capuchino frío</h3>
+                    <p>Una bebida cremosa para los días de calor.</p>
+                    <p class="precio"><s>$8.000</s> <strong>$7.000</strong></p>
+                </article>
+                <article class="tarjeta">
+                    <div class="tarjeta__icono" aria-hidden="true">🍰</div>
+                    <h3>Porción de torta</h3>
+                    <p>Un postre suave para acompañar tu bebida.</p>
+                    <p class="precio">$5.000</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Información útil con lista ordenada y no ordenada -->
+        <section class="seccion seccion--suave" id="informacion">
+            <h2>Antes de visitarnos</h2>
+            <div class="informacion">
+                <article>
+                    <h3>Horarios</h3>
+                    <ul class="lista-horarios">
+                        <li>Lunes a viernes: 8:00 a. m. – 7:00 p. m.</li>
+                        <li>Sábados: 9:00 a. m. – 6:00 p. m.</li>
+                        <li>Domingos: 10:00 a. m. – 3:00 p. m.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>¿Cómo hacer un pedido?</h3>
+                    <ol>
+                        <li>Revisa los productos y precios.</li>
+                        <li>Completa el formulario de pedidos.</li>
+                        <li>Espera nuestra confirmación.</li>
+                    </ol>
+                </article>
+            </div>
+            <p class="nota">Los precios y horarios son de ejemplo para este proyecto académico.</p>
+        </section>
+
+        <!-- Opiniones de ejemplo -->
+        <section class="seccion" id="opiniones">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="opiniones">
+                <article class="opinion">
+                    <blockquote>“El café es delicioso y la atención es muy amable.”</blockquote>
+                    <p><cite>— Laura, cliente frecuente (opinión ficticia)</cite></p>
+                </article>
+                <article class="opinion">
+                    <blockquote>“La torta de chocolate es perfecta para la tarde.”</blockquote>
+                    <p><cite>— Andrés, visitante (opinión ficticia)</cite></p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Ubicación -->
+        <section class="seccion seccion--suave" id="ubicacion">
+            <h2>¿Dónde estamos?</h2>
+            <p>Estamos en Bucaramanga, Santander. La dirección exacta es un dato ilustrativo.</p>
+            <div class="mapa">
+                <iframe
+                    title="Mapa de referencia de Bucaramanga"
+                    src="https://maps.google.com/maps?q=Bucaramanga%2C%20Santander&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p><a href="https://www.google.com/maps/search/?api=1&query=Bucaramanga+Santander" target="_blank" rel="noopener noreferrer">Abrir mapa en otra pestaña</a></p>
+            <p>¿Quieres conocer las tarifas? <a href="precios.html#tabla-precios">Consulta la tabla de precios</a>.</p>
+            <p>La abreviatura <abbr title="Pesos colombianos">COP</abbr> significa pesos colombianos.</p>
+        </section>
+    </main>
+
+    <!-- Pie de página compartido -->
+    <footer class="pie">
+        <p><strong>Café Esquina</strong> · Proyecto académico de HTML y CSS</p>
+        <p><a href="#inicio">Volver al inicio ↑</a></p>
+    </footer>
+</body>
+</html>

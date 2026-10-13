@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta los precios de Café Esquina y envía tu pedido.">
+    <title>Café Esquina | Precios y pedidos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Encabezado compartido -->
+    <header class="encabezado">
+        <a class="encabezado__logo" href="index.html">Café Esquina</a>
+        <nav class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="precios.html">Precios y pedidos</a>
+            <a href="index.html#productos">Productos</a>
+            <a href="index.html#ubicacion">Ubicación</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pagina-titulo">
+            <p class="portada__etiqueta">¡Estamos para atenderte!</p>
+            <h1>Precios y pedidos</h1>
+            <p>Elige tus favoritos y envíanos los detalles de tu pedido.</p>
+        </section>
+
+        <!-- Tabla de precios -->
+        <section class="seccion" id="tabla-precios">
+            <h2>Menú y tarifas</h2>
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Producto</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Café colombiano</td>
+                            <td>Café caliente tradicional</td>
+                            <td>$4.000</td>
+                        </tr>
+                        <tr>
+                            <td>Capuchino frío</td>
+                            <td>Bebida cremosa con hielo</td>
+                            <td>$7.000</td>
+                        </tr>
+                        <tr>
+                            <td>Porción de torta</td>
+                            <td>Porción del día</td>
+                            <td>$5.000</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><strong>Promoción de bebida + torta</strong></td>
+                            <td><strong>$10.500</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="nota">Precios ficticios para el ejercicio. El símbolo $ representa pesos colombianos.</p>
+        </section>
+
+        <!-- Formulario sencillo -->
+        <section class="seccion seccion--suave" id="pedido">
+            <h2>Haz tu pedido</h2>
+            <p>Completa los campos. Este formulario es una demostración y todavía no envía información a un negocio real.</p>
+            <form class="formulario" action="#" method="get">
+                <div class="formulario__campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" required>
+                </div>
+                <div class="formulario__campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" required>
+                </div>
+                <div class="formulario__campo">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ej. 3001234567">
+                </div>
+                <div class="formulario__campo">
+                    <label for="producto">¿Qué deseas pedir?</label>
+                    <select id="producto" name="producto" required>
+                        <option value="">Selecciona un producto</option>
+                        <option value="cafe">Café colombiano</option>
+                        <option value="capuchino">Capuchino frío</option>
+                        <option value="torta">Porción de torta</option>
+                        <option value="promocion">Bebida + torta</option>
+                    </select>
+                </div>
+                <div class="formulario__campo">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" value="1" required>
+                </div>
+                <div class="formulario__campo">
+                    <label for="mensaje">Detalles adicionales</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí alguna indicación..."></textarea>
+                </div>
+                <button class="boton" type="submit">Enviar pedido de prueba</button>
+            </form>
+        </section>
+
+        <section class="seccion">
+            <h2>¿Tienes dudas?</h2>
+            <p>Regresa a <a href="index.html">la página de inicio</a> para ver los productos, horarios y ubicación.</p>
+        </section>
+    </main>
+
+    <!-- Pie de página compartido -->
+    <footer class="pie">
+        <p><strong>Café Esquina</strong> · Proyecto académico de HTML y CSS</p>
+        <p><a href="#tabla-precios">Volver a los precios ↑</a></p>
+    </footer>
+</body>
+</html>
